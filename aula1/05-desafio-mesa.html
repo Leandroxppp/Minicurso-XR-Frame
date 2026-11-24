@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-light type="ambient" color="#FFD9B0" intensity="0.6"></a-light>
+    <a-light type="directional" color="#FF9A4D" intensity="0.9" position="-3 2 1"></a-light>
+    <a-scene>
+        <a-assets>
+        <a-asset-item id="pato"
+            src="https://raw.githubusercontent.com/KhronosGroupArchives/glTF-Sample-Models/main/2.0/Duck/glTF-Binary/Duck.glb">
+            </a-asset-item>
+        <a-asset-item id="abacate"
+        src="https://raw.githubusercontent.com/KhronosGroupArchives/glTF-Sample-Models/main/2.0/Avocado/glTF-Binary/Avocado.glb">
+        </a-asset-item>
+        </a-assets>
+      <!-- PAI: a mesa. Os filhos ficam dentro dele -->
+      <a-entity id="mesa" position="0 0 -2.5" scale="1.2 1.2 1.2">
+        <!-- tampo -->
+        <a-box position="0 0.75 0" width="1.2" height="0.05" depth="0.8" color="#8B5A2B"></a-box>
+        
+        <!-- 4 pernas -->
+        <a-box position="-0.55 0.36 -0.35" width="0.05" height="0.72" depth="0.05" color="#5C3A1E"></a-box>
+        <a-box position="0.55 0.36 -0.35" width="0.05" height="0.72" depth="0.05" color="#5C3A1E"></a-box>
+        <a-box position="-0.55 0.36 0.35" width="0.05" height="0.72" depth="0.05" color="#5C3A1E"></a-box>
+        <a-box position="0.55 0.36 0.35" width="0.05" height="0.72" depth="0.05" color="#5C3A1E"></a-box>
+        <!-- bola em cima -->
+        <a-entity gltf-model="#pato" position="-0.25 0.775 0" rotation="0 -90 0" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity gltf-model="#abacate" position="0.25 0.775 0" scale="2.5 2.5 2.5"></a-entity>
+      </a-entity>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#F4A261"></a-sky>
+    </a-scene>
+  </body>
+</html>
