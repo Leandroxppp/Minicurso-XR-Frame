@@ -23,8 +23,6 @@ Os modelos 3D são carregados por links Raw do GitHub, então é preciso interne
 Copiei o código de *Getting Started* da documentação do A-Frame e abri no
 navegador. Na cena, arrastar o mouse olha em volta e W A S D anda.
 
-![Cena padrão](aula1/img/01-cena-padrao.png)
-
 ## 2. Modelo GLB
 
 Usei dois modelos do repositório glTF-Sample-Models: o pato (Duck) e o
@@ -37,8 +35,6 @@ o `src`) e `a-entity gltf-model="#id"` (coloca o modelo na cena).
 Cada modelo vem em um tamanho. O pato usou `scale="0.5 0.5 0.5"`; o abacate é
 bem menor no arquivo (cerca de 6 cm), então usei `scale="10 10 10"`.
 
-![Pato](aula1/img/02-modelo-glb-pato.png)
-![Abacate](aula1/img/02b-modelo-glb-abacate.png)
 
 ## 3. Inspetor
 
@@ -54,7 +50,6 @@ Por isso passei os valores escolhidos para o HTML:
 <a-entity gltf-model="#pato" position="1 0 -3" rotation="0 -90 0" scale="1 1 1"></a-entity>
 ```
 
-![Inspetor](aula1/img/03-inspetor.png)
 
 ## 4. Hierarquia
 
@@ -65,8 +60,6 @@ filhos, e fiz três testes:
 - Ao mexer só em **um filho**, apenas ele se moveu.
 - Com o pai em `0 0 -3` e a bola em `0 0.875 0`, a bola fica no mundo em
   `0 0.875 -3`, porque a posição do filho é medida a partir do pai.
-
-![Hierarquia](aula1/img/04-hierarquia.png)
 
 ## 5. Desafio: mesa com dois modelos
 
@@ -84,8 +77,6 @@ Passos feitos, cada um continuando a cena do anterior:
 Ao adicionar luzes próprias, o A-Frame desliga as luzes padrão. Por isso o chão
 e a mesa ficam mais escuros e com tons quentes, como esperado para um fim de
 tarde.
-
-![Desafio](aula1/img/05-desafio-mesa.png)
 
 ## Dificuldades e aprendizados
 
