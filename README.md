@@ -5,7 +5,7 @@ Exercícios da Aula 1 do minicurso de Realidade Estendida com A-Frame
 
 ## Como rodar
 
-Abra qualquer arquivo da pasta [`aula1/`](aula1/) no Chrome com dois cliques.
+Abra qualquer arquivo da pasta `aula1/` no Chrome com dois cliques.
 Os modelos 3D são carregados por links Raw do GitHub, então é preciso internet.
 
 ## Estrutura
@@ -27,10 +27,9 @@ navegador. Na cena, arrastar o mouse olha em volta e W A S D anda.
 
 ## 2. Modelo GLB
 
-Usei dois modelos do repositório
-[glTF-Sample-Models](https://github.com/KhronosGroupArchives/glTF-Sample-Models):
-o pato (Duck) e o abacate (Avocado), sempre pelo link **Raw** do arquivo `.glb`
-da pasta `glTF-Binary`.
+Usei dois modelos do repositório glTF-Sample-Models: o pato (Duck) e o
+abacate (Avocado), sempre pelo link **Raw** do arquivo `.glb` da pasta
+`glTF-Binary`.
 
 São três tags: `a-assets` (carrega os arquivos), `a-asset-item` (dá um `id` e
 o `src`) e `a-entity gltf-model="#id"` (coloca o modelo na cena).
@@ -79,10 +78,12 @@ Passos feitos, cada um continuando a cena do anterior:
 4. Abacate ao lado, com o mesmo tamanho aparente (`scale="2.5 2.5 2.5"`).
 5. Usei o inspetor para achar a rotação: o pato precisou de `rotation="0 -90 0"`
    e o abacate já estava de frente.
-6. Fim de tarde: céu `#F4A261`, uma luz `ambient` e uma `directional`.
+6. Fim de tarde: céu `#F4A261`, uma luz `ambient` e uma `directional`, ambas
+   dentro da `<a-scene>`.
 
-Ao adicionar luzes próprias, o A-Frame desliga as luzes padrão. Por isso a cena
-ficou alaranjada e mais escura, como esperado.
+Ao adicionar luzes próprias, o A-Frame desliga as luzes padrão. Por isso o chão
+e a mesa ficam mais escuros e com tons quentes, como esperado para um fim de
+tarde.
 
 ![Desafio](aula1/img/05-desafio-mesa.png)
 
@@ -96,6 +97,9 @@ ficou alaranjada e mais escura, como esperado.
   salva nada. Aprendi a anotar o que funcionou e copiar para o HTML.
 - **Pai e filho:** mexer no pai move todos os filhos, e a posição de cada filho
   é relativa ao pai. Isso facilita montar objetos compostos, como a mesa.
+- **Luzes fora da cena:** coloquei as `a-light` fora da `<a-scene>` e a cena
+  ficou toda preta, só com o céu laranja. Tudo o que deve aparecer na cena,
+  incluindo as luzes, precisa ficar entre `<a-scene>` e `</a-scene>`.
 - **Organização dos arquivos:** ao trocar o link dentro do mesmo arquivo, perdi o
   código do pato. Passei a criar um arquivo novo para cada exercício.
 
